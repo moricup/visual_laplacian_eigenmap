@@ -1,0 +1,4 @@
+{
+    "sample_size": 1000,
+    "knots": ["trefoil"]
+}

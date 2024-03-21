@@ -7,7 +7,7 @@ class TrefoilSampler(Sampler):
         self.sample_size = sample_size
 
     def sample(self):
-        t = np.random.uniform(0, 2*np.pi, self.sample_size)
+        t = np.linspace(0, 2*np.pi, self.sample_size)
         x = np.sin(t) + 2*np.sin(2*t)
         y = np.cos(t) - 2*np.cos(2*t)
         z = -np.sin(3*t)

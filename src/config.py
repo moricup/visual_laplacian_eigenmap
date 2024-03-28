@@ -2,8 +2,9 @@ from dataclasses import dataclass
 
 from src.knot.core import Sampler
 from src.knot.trefoil import TrefoilSampler
-from src.knot.hoph import HophSampler
 from src.knot.eight import EightSampler
+from src.knot.hoph import HophSampler
+from src.knot.hooph import HoophSampler
 
 @dataclass
 class BaseKnot:
@@ -41,4 +42,13 @@ HOPH = BaseKnot(
     sampler_class=HophSampler
 )
 
-KNOTS = [TREFOIL, EIGHT, HOPH]
+HOOPH = BaseKnot(
+    knot_kind="hooph",
+    sample_size=999,
+    n_neighbors=10,
+    elev=45,
+    azim=0,
+    sampler_class=HoophSampler
+)
+
+KNOTS = [TREFOIL, EIGHT, HOPH, HOOPH]

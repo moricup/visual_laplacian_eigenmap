@@ -3,7 +3,7 @@ import numpy as np
 from src.knot.core import Sampler
 
 class HophSampler(Sampler):
-    def __init__(self, sample_size):
+    def __init__(self, sample_size: int):
         self.sample_size = sample_size
 
     def sample(self):

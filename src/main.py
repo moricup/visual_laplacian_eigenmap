@@ -11,9 +11,8 @@ def main():
         azim = knot.azim
         sampler = knot.sampler_class(sample_size)
         x, y, z = sampler.sample()
-        savepic3D(x, y, z, f"png/original/{knot_kind}.png", elev, azim)
+        savepic3D(x,y,z,f"png/original/{knot_kind}.png",elev,azim)
         mapped_xy = eigenmap(x, y, z, n_neighbors)
-        savepic2D(mapped_xy[:, 0], mapped_xy[:, 1], f"png/mapped/{knot_kind}.png")
-
+        savepic2D(mapped_xy[:,0],mapped_xy[:,1],f"png/mapped/{knot_kind}.png")
 if __name__ == "__main__":
     main()

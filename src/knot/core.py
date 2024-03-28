@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class Sampler(ABC):
     @abstractmethod
-    def __init__(self, sample_size):
+    def __init__(self, sample_size: int):
         pass
     
     @abstractmethod

@@ -5,6 +5,7 @@ from src.knot.trefoil import TrefoilSampler
 from src.knot.eight import EightSampler
 from src.knot.hoph import HophSampler
 from src.knot.hooph import HoophSampler
+from src.knot.random_trefoil import RandomTrefoilSampler
 
 @dataclass
 class BaseKnot:
@@ -51,4 +52,15 @@ HOOPH = BaseKnot(
     sampler_class=HoophSampler
 )
 
-KNOTS = [TREFOIL, EIGHT, HOPH, HOOPH]
+RANDOM_TREFOIL = BaseKnot(
+    knot_kind="random_trefoil",
+    sample_size=5000,
+    n_neighbors=5,
+    elev=60,
+    azim=75,
+    sampler_class=RandomTrefoilSampler
+)
+
+
+KNOTS = [TREFOIL, EIGHT, HOPH, HOOPH, RANDOM_TREFOIL]
+
